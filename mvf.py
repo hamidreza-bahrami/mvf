@@ -1,4 +1,3 @@
-from tkinter import Button
 import streamlit as st
 import numpy as np
 import keras
@@ -17,12 +16,12 @@ def show_page():
     st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
     st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
 
-    image = st.file_uploader('آپلود تصویر', type=['jpg', 'jpeg'])
-    button = st.button('تحلیل تصویر')       
+    image = st.file_uploader('آپلود تصویر', type=['jpg', 'jpeg'])      
     if image is not None:
         file_bytes = np.array(bytearray(image.read()), dtype= np.uint8)
         img = cv2.imdecode(file_bytes, 1)
         st.image(img, channels= 'BGR', use_column_width= True)
+        button = st.button('تحلیل تصویر') 
         if button: 
             x = cv2.resize(img, (128, 128))
             x1 = img_to_array(x)
