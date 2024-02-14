@@ -16,7 +16,7 @@ def show_page():
     st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
     st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
 
-    image = st.file_uploader('آپلود تصویر', type=['jpg', 'jpeg'])      
+    image = st.file_uploader('آپلود تصویر', type=['jpg', 'jpeg', 'png'])      
     if image is not None:
         file_bytes = np.array(bytearray(image.read()), dtype= np.uint8)
         img = cv2.imdecode(file_bytes, 1)
