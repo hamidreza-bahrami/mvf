@@ -1,0 +1,6 @@
+keras==2.15.0
+tensorflow==2.15.0
+numpy==1.26.3
+opencv_contrib_python==4.8.1.78
+opencv_python==4.8.1.78
+streamlit==1.31.0
