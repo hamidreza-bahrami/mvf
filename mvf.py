@@ -5,7 +5,7 @@ import time
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
 
-model = load_model('gender_model.h5')
+model = load_model('model.h5')
 
 def preprocess_image(image):
     file_bytes = np.array(bytearray(image.read()), dtype=np.uint8)
